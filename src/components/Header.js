@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import Container from "./styles/Container.style";
 import { StyledHeader } from "./styles/Header.styled";
 
 function Header() {
   return (
     <StyledHeader>
-      <h1>Gateway Growhouse</h1>
+      <Container>
+        <h1>Gateway Growhouse</h1>
+      </Container>
     </StyledHeader>
   );
 }
