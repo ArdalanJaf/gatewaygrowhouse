@@ -1,38 +1,35 @@
-import styled from "styled-components";
 import Container from "./styles/Container.style";
-import { StyledHeader } from "./styles/Header.styled";
+import { StyledHeader, Nav, Logo, Image } from "./styles/Header.styled";
+import { Button } from "./styles/Button.style";
+import { Flex } from "./styles/Flex.styled";
 
 function Header() {
   return (
     <StyledHeader>
       <Container>
-        <h1>Gateway Growhouse</h1>
+        <Nav>
+          <Logo src="./images/logo.svg" alt="" />
+          <Button>Try It Free</Button>
+        </Nav>
+
+        <Flex>
+          <div>
+            <h1>Build The Community Your Fans Will Love</h1>
+            <p>
+              Huddle re-imagines the way we build communities. You have a voice,
+              but so does your audience. Create connections with your users as
+              you engage in genuine discussion.
+            </p>
+            <Button backgroundColor="#ff0099" color="#fff">
+              {" "}
+              Get Started For Free
+            </Button>
+          </div>
+          <Image src="./images/illustration-mockups.svg" alt="" />
+        </Flex>
       </Container>
     </StyledHeader>
   );
 }
-
-// import styled from "styled-components";
-
-// function Header() {
-//   const Title = styled.h1`
-//     font-size: 1.5em;
-//     text-align: center;
-//     color: palevioletred;
-//   `;
-
-//   const Wrapper = styled.section`
-//     padding: 4em;
-//     background: papayawhip;
-//   `;
-
-//   return (
-//     <Wrapper>
-//       <Title>
-//         <h1>Gateway Growhouse</h1>
-//       </Title>
-//     </Wrapper>
-//   );
-// }
 
 export default Header;

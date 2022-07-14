@@ -1,6 +1,5 @@
-import { StyledButton } from "./components/styles/Button.style";
 import Container from "./components/styles/Container.style";
-import { GlobalStyles } from "./components/styles/GlobalStyles.style";
+import GlobalStyles from "./components/styles/GlobalStyles.style";
 import Header from "./components/Header";
 import { ThemeProvider } from "styled-components";
 
@@ -10,6 +9,7 @@ const theme = {
     body: "#fff",
     footer: "#003333",
   },
+  mobile: "768px",
 };
 
 function App() {
@@ -17,12 +17,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Header />
-      <Container>
-        <StyledButton
-          buttonLabel="click me"
-          backgroundColor="red"
-        ></StyledButton>
-      </Container>
+      <Container></Container>
     </ThemeProvider>
   );
 }
