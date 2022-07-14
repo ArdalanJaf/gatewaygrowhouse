@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { StyledButton } from "./components/styles/Button.style";
+import Container from "./components/styles/Container.style";
+import { GlobalStyles } from "./components/styles/GlobalStyles.style";
+import Header from "./components/Header";
+import { ThemeProvider } from "styled-components";
+
+const theme = {
+  colors: {
+    header: "lightblue",
+    body: "#000",
+  },
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Header />
+      <Container>
+        <StyledButton
+          buttonLabel="click me"
+          backgroundColor="red"
+        ></StyledButton>
+      </Container>
+    </ThemeProvider>
   );
 }
 
